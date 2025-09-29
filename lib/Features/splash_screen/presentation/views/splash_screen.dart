@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:runway_fashion/Core/utils/app_route.dart';
 import 'package:runway_fashion/Core/utils/assets.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,7 +24,9 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
     _animationController.forward();
     _animationController.addStatusListener((status) {
-      if (status == AnimationStatus.completed && mounted) {}
+      if (status == AnimationStatus.completed && mounted) {
+        context.pushReplacement(AppRoute.homeScreen);
+      }
     });
   }
 

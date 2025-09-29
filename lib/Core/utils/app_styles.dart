@@ -6,7 +6,7 @@ abstract class AppStyles {
     return TextStyle(
       color: Theme.of(context).textTheme.bodyLarge?.color,
       fontSize: getResponsiveFontSize(context, fontSize: 16),
-      fontFamily: 'Inter',
+      fontFamily: 'AlanSans',
       fontWeight: FontWeight.w600,
     );
   }
@@ -15,7 +15,7 @@ abstract class AppStyles {
     return TextStyle(
       color: Theme.of(context).textTheme.bodyLarge?.color,
       fontSize: getResponsiveFontSize(context, fontSize: 14),
-      fontFamily: 'Inter',
+      fontFamily: 'AlanSans',
       fontWeight: FontWeight.w600,
     );
   }
@@ -24,7 +24,7 @@ abstract class AppStyles {
     return TextStyle(
       color: Theme.of(context).textTheme.bodyLarge?.color,
       fontSize: getResponsiveFontSize(context, fontSize: 10),
-      fontFamily: 'Inter',
+      fontFamily: 'AlanSans',
       fontWeight: FontWeight.w600,
     );
   }
@@ -33,7 +33,7 @@ abstract class AppStyles {
     return TextStyle(
       color: Theme.of(context).textTheme.bodyLarge?.color,
       fontSize: getResponsiveFontSize(context, fontSize: 14),
-      fontFamily: 'Inter',
+      fontFamily: 'AlanSans',
       fontWeight: FontWeight.w500,
     );
   }
@@ -42,7 +42,7 @@ abstract class AppStyles {
     return TextStyle(
       color: const Color(0xFF5A5555),
       fontSize: getResponsiveFontSize(context, fontSize: 16),
-      fontFamily: 'Inter',
+      fontFamily: 'AlanSans',
       fontWeight: FontWeight.w700,
     );
   }
@@ -51,7 +51,7 @@ abstract class AppStyles {
     return TextStyle(
       color: const Color(0xFF5A5555),
       fontSize: getResponsiveFontSize(context, fontSize: 20),
-      fontFamily: 'Inter',
+      fontFamily: 'AlanSans',
       fontWeight: FontWeight.w700,
     );
   }
