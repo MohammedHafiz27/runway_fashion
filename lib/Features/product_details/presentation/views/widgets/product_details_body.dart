@@ -21,7 +21,7 @@ class ProductDetailsBody extends StatelessWidget {
           ),
         ),
         DraggableScrollableSheet(
-          initialChildSize: 0.5,
+          initialChildSize: 0.2,
           minChildSize: 0.2,
           maxChildSize: 0.6,
           builder: (context, scrollController) {

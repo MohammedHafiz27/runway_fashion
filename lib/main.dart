@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<ThemeCubit, ThemeMode>(
         builder: (context, state) {
           return MaterialApp.router(
+            debugShowCheckedModeBanner: false,
             routerConfig: AppRoute.router,
             theme: ThemeData.light().copyWith(scaffoldBackgroundColor: Colors.white),
             darkTheme: AppTheme.darkTheme,
