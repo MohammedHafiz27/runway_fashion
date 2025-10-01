@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:runway_fashion/Core/utils/app_route.dart';
 import 'package:runway_fashion/Core/utils/assets.dart';
 import 'package:runway_fashion/Features/home_page/data/models/categories_model.dart';
 import 'package:runway_fashion/Features/home_page/presentation/views/widgets/categories_item.dart';
@@ -20,7 +22,10 @@ class CategoriesItemBuilder extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: CategoriesItem(image: categories[index].image, title: categories[index].title),
+          child: GestureDetector(
+            onTap: () => context.push(AppRoute.categoriesDetailsScreen),
+            child: CategoriesItem(image: categories[index].image, title: categories[index].title),
+          ),
         );
       },
     );
