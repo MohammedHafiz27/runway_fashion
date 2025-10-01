@@ -40,7 +40,7 @@ abstract class AppStyles {
 
   static TextStyle styleBold16(BuildContext context) {
     return TextStyle(
-      color: const Color(0xFF5A5555),
+      color: Theme.of(context).textTheme.bodyLarge?.color,
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: 'AlanSans',
       fontWeight: FontWeight.w700,
@@ -49,7 +49,7 @@ abstract class AppStyles {
 
   static TextStyle styleBold20(BuildContext context) {
     return TextStyle(
-      color: const Color(0xFF5A5555),
+      color: Theme.of(context).textTheme.bodyLarge?.color,
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontFamily: 'AlanSans',
       fontWeight: FontWeight.w700,

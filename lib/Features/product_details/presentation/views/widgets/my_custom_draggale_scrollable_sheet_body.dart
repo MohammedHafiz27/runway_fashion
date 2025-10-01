@@ -26,7 +26,7 @@ class MyDraggableScrollableSheetBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HandleBar(),
-            Text(productModel.title, style: AppStyles.styleBold20(context)),
+            Text(productModel.title, style: AppStyles.styleBold20(context).copyWith(color: Colors.black87)),
             const SizedBox(height: 10),
             Row(
               children: [
@@ -40,13 +40,13 @@ class MyDraggableScrollableSheetBody extends StatelessWidget {
             const SizedBox(height: 20),
 
             /// Select Colour
-            Text("Select Colour", style: AppStyles.styleBold16(context)),
+            Text("Select Colour", style: AppStyles.styleBold16(context).copyWith(color: Colors.black87)),
             const SizedBox(height: 10),
             RowColorsOption(),
             const SizedBox(height: 20),
 
             /// Select Size
-            Text("Select Size", style: AppStyles.styleBold16(context)),
+            Text("Select Size", style: AppStyles.styleBold16(context).copyWith(color: Colors.black87)),
             const SizedBox(height: 10),
             RowSizeOption(),
             const SizedBox(height: 20),

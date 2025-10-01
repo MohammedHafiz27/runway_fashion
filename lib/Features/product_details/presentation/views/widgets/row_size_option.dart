@@ -8,7 +8,7 @@ class RowSizeOption extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizeOption(size: "S"),
+        SizeOption(size: "S",),
         SizeOption(size: "M"),
         SizeOption(size: "L"),
         SizeOption(size: "XL"),

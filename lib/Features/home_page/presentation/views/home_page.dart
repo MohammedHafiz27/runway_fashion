@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:runway_fashion/Core/utils/assets.dart';
+import 'package:runway_fashion/Core/widgets/custom_app_bar.dart';
 import 'package:runway_fashion/Features/home_page/presentation/views/widgets/home_page_body.dart';
+import 'package:runway_fashion/main.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,12 +11,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.black,
+        selectedItemColor: getColorBasedOnTheme(context),
         unselectedItemColor: Colors.grey,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        backgroundColor: Colors.white,
-        
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "Likes"),
@@ -26,15 +24,11 @@ class HomePage extends StatelessWidget {
       ),
       appBar: AppBar(
         leadingWidth: 0,
+        backgroundColor: Colors.transparent,
         leading: SizedBox.shrink(),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SvgPicture.asset(Assets.imagesBarChart),
-            SvgPicture.asset(Assets.imagesRunway, width: 90),
-            SvgPicture.asset(Assets.imagesSolarBellLineDuotone),
-          ],
-        ),
+        title: Theme.of(context).brightness == Brightness.dark
+            ? CustomAppbar(color: Colors.white)
+            : CustomAppbar(color: Colors.black),
       ),
 
       body: HomepageBody(),

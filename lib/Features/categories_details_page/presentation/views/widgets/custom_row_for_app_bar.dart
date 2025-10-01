@@ -17,7 +17,9 @@ class CustomAppBar extends StatelessWidget {
           children: [
             IconButton(onPressed: () => context.pop(), icon: Icon(Icons.arrow_back)),
             Text("Men", style: AppStyles.styleBold20(context)),
-            SvgPicture.asset(Assets.imagesbag),
+            Theme.of(context).brightness == Brightness.dark
+                ? SvgPicture.asset(Assets.imagesbag, colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn))
+                : SvgPicture.asset(Assets.imagesbag, colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn)),
           ],
         ),
         Container(
@@ -29,11 +31,9 @@ class CustomAppBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("Sort by", style: AppStyles.styleBold20(context)),
-              DropdownButton(
-                items: [],
-                onChanged: (value) {},
-                icon: Icon(Icons.south_rounded, color: Colors.black),
-              ),
+              Theme.of(context).brightness == Brightness.dark
+                  ? SvgPicture.asset(Assets.imagesSortBy, colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn))
+                  : SvgPicture.asset(Assets.imagesSortBy, colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn)),
               Spacer(),
               Icon(Icons.compare_arrows_rounded),
               Text("Filter", style: AppStyles.styleSemiBold14(context)),

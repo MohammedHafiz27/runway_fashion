@@ -9,7 +9,10 @@ class CategoriesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.sizeOf(context).width,
-      decoration: BoxDecoration(color: Colors.white),
+      decoration: BoxDecoration(
+        color: Theme.of(context).brightness == Brightness.dark ? Colors.black45 : Colors.white54,
+        borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12.0),
         child: Column(

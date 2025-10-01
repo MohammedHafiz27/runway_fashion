@@ -40,4 +40,5 @@ class Assets {
   static const String imagesWoman = "assets/images/woman.png";
 
   static const String imagesShadow = "assets/images/shadow.png";
+  static const String imagesSortBy = "assets/images/sortby.svg";
 }
