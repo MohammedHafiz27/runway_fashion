@@ -62,7 +62,15 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                     child: child,
                   );
                 },
-                child: SvgPicture.asset(Assets.imagesUnderLine),
+                child: Theme.of(context).brightness == Brightness.dark
+                    ? SvgPicture.asset(
+                        Assets.imagesUnderLine,
+                        colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                      )
+                    : SvgPicture.asset(
+                        Assets.imagesUnderLine,
+                        colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn),
+                      ),
               ),
             ],
           ),
