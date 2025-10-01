@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:runway_fashion/Core/utils/app_theme.dart';
 import 'package:runway_fashion/Core/widgets/custom_app_bar.dart';
 import 'package:runway_fashion/Features/home_page/presentation/views/widgets/home_page_body.dart';
-import 'package:runway_fashion/main.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: getColorBasedOnTheme(context),
+        selectedItemColor: AppTheme.getColorBasedOnTheme(context),
         unselectedItemColor: Colors.grey,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
 

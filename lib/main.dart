@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:runway_fashion/Core/cubit/theme_cubit.dart';
 import 'package:runway_fashion/Core/utils/app_route.dart';
 import 'package:runway_fashion/Core/utils/app_theme.dart';
 
@@ -11,15 +13,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: AppRoute.router,
-      theme: ThemeData.light().copyWith(scaffoldBackgroundColor: Colors.white),
-      darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.dark,
+    return BlocProvider(
+      create: (context) => ThemeCubit(),
+      child: BlocBuilder<ThemeCubit, ThemeMode>(
+        builder: (context, state) {
+          return MaterialApp.router(
+            routerConfig: AppRoute.router,
+            theme: ThemeData.light().copyWith(scaffoldBackgroundColor: Colors.white),
+            darkTheme: AppTheme.darkTheme,
+            themeMode: state,
+          );
+        },
+      ),
     );
   }
-}
-
-Color getColorBasedOnTheme(BuildContext context) {
-  return Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black;
 }
