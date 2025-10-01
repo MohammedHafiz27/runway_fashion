@@ -9,13 +9,13 @@ class CategoriesDetailsBody extends StatelessWidget {
   static final List<ProductModel> products = [
     ProductModel(image: Assets.imagesGreenCoatAndWhiteTShirt, title: "Green coat and white T-shirt", price: "£30"),
     ProductModel(image: Assets.imagesGrayCoatAndWhiteTShirtpng, title: "Gray coat and white T-shirt", price: "£30"),
-    ProductModel(image: Assets.imagesDeepGrayEssential, title: "Deep gray essential", price: "£30"),
+    ProductModel(image: Assets.imagesWhiteTShirt, title: "White T-shirt", price: "£30"),
     ProductModel(
       image: Assets.imagesClassicTailoredFitMenDressShirt,
       title: "Classic tailored fit men's dress shirt",
       price: "£30",
     ),
-    ProductModel(image: Assets.imagesWhiteTShirt, title: "White T-shirt", price: "£30"),
+    ProductModel(image: Assets.imagesDeepGrayEssential, title: "Deep gray essential", price: "£30"),
     ProductModel(image: Assets.imagesTopManBlackWithTrous, title: "Topman black with trousers", price: "£30"),
   ];
 
