@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:runway_fashion/Core/cache_helper/cache_helper.dart';
 import 'package:runway_fashion/Core/cubit/theme_cubit.dart';
 import 'package:runway_fashion/Core/utils/app_route.dart';
 import 'package:runway_fashion/Core/utils/app_theme.dart';
 
-void main() {
+Future<void> main() async {
+  await CacheHelper.init();
   runApp(const MyApp());
 }
 
